@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="LDFComicSans.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                Hannan Mobiles</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">Categories</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#authModal">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cartpage.html">Cart <span class="badge bg-danger">0</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="authModalLabel">Sign In / Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="signin-tab" data-bs-toggle="tab"
+                                data-bs-target="#signin" type="button" role="tab">Sign In</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register"
+                                type="button" role="tab">Register</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-3" id="authTabsContent">
+                        <div class="tab-pane fade show active" id="signin" role="tabpanel">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="signinEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="signinEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signinPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="signinPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="register" role="tabpanel">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="registerName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="registerName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="registerEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="registerPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-success w-100">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="https://img.global.news.samsung.com/in/wp-content/uploads/2022/03/11389_A73-PR_Digital-banners-3000x2000.jpg"
+                class="d-block w-100" style="height: 80vh;" alt="Slide 2">
+            </div>
+            <div class="carousel-item active">
+                <img src="https://www.androidauthority.com/wp-content/uploads/2021/01/Samsung-Galaxy-S21-Press-Renders-1280w-720h.jpg.webp"
+                    class="d-block w-100" style="height: 80vh;" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.gulfbuzz.com/wp-content/uploads/2024/08/website-banner-size-1050450-new-31-1024x439.png"
+                    class="d-block w-100" style="height: 80vh;" alt="Slide 6">
+            </div>
+            <div class="carousel-item">
+                <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202203/Galaxy-M32-5G.jpg?size=690:388"
+                    class="d-block w-100" style="height: 80vh;" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+                <img src="https://ssmobile.com/in/assets/img/category/Web_banner_S24_series.png"
+                    class="d-block w-100" style="height: 80vh;" alt="Slide 4">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.gulfbuzz.com/wp-content/uploads/2024/08/website-banner-size-1050450-new-31-1024x439.png"
+                    class="d-block w-100" style="height: 80vh;" alt="Slide 5">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div style="background: #f6faff;">
+        <div class="row text-center justify-content-around">
+            <div class="col-3 pipe p-0">
+                <div class="row myIconRow">
+                    <div class="col-md-4">
+                        <img src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334305_small.svg?v=1682336123"
+                            alt="">
+                    </div>
+                    <div class="col-md-4 myText">
+                        <p class="mb-0">
+                            <b>1 Year</b>
+                            <br>
+                            Warranty
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 pipe p-0">
+                <div class="row myIconRow">
+                    <div class="col-md-4">
+                        <img src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334304_small.svg?v=1682336123"
+                            alt="">
+                    </div>
+                    <div class="col-md-4 myText">
+                        <p class="mb-0">
+                            <b>7-days</b>
+                            <br>
+                            Replacement
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 pipe p-0">
+                <div class="row myIconRow">
+                    <div class="col-md-4">
+                        <img src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334303_small.svg?v=1682336123"
+                            alt="">
+                    </div>
+                    <div class="col-md-4 myText">
+                        <p class="mb-0">
+                            <b>Free Express</b>
+                            <br>
+                            Delivery
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 pipe p-0">
+                <div class="row myIconRow">
+                    <div class="col-md-4">
+                        <img src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334302_small.svg?v=1682336123"
+                            alt="">
+                    </div>
+                    <div class="col-md-4 myText">
+                        <p class="mb-0">
+                            <b>GST</b>
+                            <br>
+                            Billing
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="online-shopping" id="shop">
+        <div class="container">
+            <div class="row  mt-5">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://m.media-amazon.com/images/I/61-kjUCw1OL._SX425_.jpg"
+                            alt="Random Image" height="100%" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Samsung Galaxy S21 5G</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$230.99</span>
+                                <span class="offer badge bg-danger">20% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://p.turbosquid.com/ts-thumb/Pk/XIMUAj/z2/all/jpg/1641417961/1920x1080/fit_q87/a47a07f9a832866de39ea7f5b5a99f3e63d071f3/all.jpg"
+                            alt="Random Image" height="100%" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Samsung Galaxy S21 fe 5G</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$300.99</span>
+                                <span class="offer badge bg-danger">20% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://www.motabhaielectronics.com/cdn/shop/products/Phone_667885d6-90c2-49e4-aac9-870f8ab0e6a6_700x.jpg?v=1671205070"
+                            alt="Random Image" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Samsung Galaxy S21 Ultra 5G</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$600.99</span>
+                                <span class="offer badge bg-danger">15% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://images.samsung.com/is/image/samsung/p6pim/nz/2202/gallery/nz-galaxy-s22-s901-sm-s901ezgdxnz-530777961?$684_547_PNG$"
+                            alt="Random Image" height="100%" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Samsung Galaxy S22 5G</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$850.99</span>
+                                <span class="offer badge bg-danger">20% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://images.samsung.com/is/image/samsung/p6pim/nz/feature/165647817/nz-feature-galaxy-s24-fe-s721-543939320?$900_N_JPG$"
+                            alt="Random Image" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Samsung Galaxy S24 fe 5G</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$999.99</span>
+                                <span class="offer badge bg-danger">20% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/2302/gallery/in-galaxy-s23-s918-sm-s918bzgcins-thumb-534863401?$492_492_PNG$"
+                            alt="Random Image" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Samsung Galaxy S23 Ultra 5G</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$1200.99</span>
+                                <span class="offer badge bg-danger">20% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/2407/gallery/in-galaxy-buds3-pro-r630-sm-r630nzaainu-542134796?$2052_1641_JPG$"
+                            alt="Random Image" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Galaxy Buds 3 Pro</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$240.99</span>
+                                <span class="offer badge bg-danger">20% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/ep-t2510nbngin/gallery/in-25w-power-adapter-black-ep-t2510nbngin-ep-t2510nbngin-ep-t----xbngin-541854932?$684_547_JPG$"
+                            alt="Random Image" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Galaxy 45W Power Adaptor</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$30.99</span>
+                                <span class="offer badge bg-danger">20% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/2407/gallery/in-galaxy-watch7-l315-sm-l315fzgains-542367167?$684_547_PNG$"
+                            alt="Random Image" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Galaxy Watch 7</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$440.99</span>
+                                <span class="offer badge bg-danger">20% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-x920nzaeins/gallery/in-galaxy-tab-s10-ultra-sm-x920-sm-x920nzaeins-thumb-543759822?$216_216_PNG$"
+                            alt="Random Image" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Galaxy Tab S10 Ultra</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$1400.99</span>
+                                <span class="offer badge bg-danger">20% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/np750qha-lg4in/gallery/in-galaxy-book5-360-15-inch-np750-538824-np750qha-lg4in-thumb-545171740?$216_216_PNG$"
+                            alt="Random Image" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Galaxy Book 5 360</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$1830.99</span>
+                                <span class="offer badge bg-danger">20% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card online-shopping-card">
+                        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/ep-t2510nbngin/gallery/in-25w-power-adapter-black-ep-t2510nbngin-ep-t2510nbngin-ep-t----xbngin-541854932?$684_547_JPG$"
+                            alt="Random Image" class="img-fluid">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Galaxy 25W Power Adaptor</h6>
+                            <div class="d-flex justify-content-between align-items-center price-offer-section">
+                                <span class="price text-success fw-bold">$20.99</span>
+                                <span class="offer badge bg-danger">20% OFF</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  class="btn btn-primary btn-block mt-3">Add to Cart</a>
+                                <a href="viewpage.html" class="btn btn-primary btn-block mt-3">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-darks text-light py-4" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-3 logos">
+                    <a class="navbar-brands" href="#">
+                        H M</a>
+                    <!-- <a class="navbar-brand" href="#">
+                        Hannan Mobiles</a> -->
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <h5 class="fw-bold text-dark">Contact Info</h5>
+                    <p class="mb-1"><i class="fa-solid fa-envelope"></i> support@hannanmobiles.com</p>
+                    <p class="mb-1"><i class="fa-solid fa-phone"></i> +91 123 456 789</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Head Office, Mumbai, India</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold text-dark">Quick Links</h5>
+                    <a href="#about-us" class="text-light d-block">About Us</a>
+                    <a href="#privacy" class="text-light d-block">Privacy Policy</a>
+                    <a href="#terms" class="text-light d-block">Terms & Conditions</a>
+                    <a href="#contact" class="text-light d-block">Contact</a>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <h5 class="fw-bold text-dark">Follow Us</h5>
+                    <a href="#" class="text-light me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-light me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-light me-2"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-light me-2"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="text-light"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <p class="mb-0">&copy; 2025 Hannan Mobiles. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="addToCartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Hannan Mobiles</strong>
+                <small class="text-muted">Just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Item added to cart!
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.online-shopping-card .btn:first-child');
+            const addToCartToastElement = document.getElementById('addToCartToast');
+            const addToCartToast = bootstrap.Toast.getOrCreateInstance(addToCartToastElement);
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    addToCartToast.show();
+                });
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/b88e997d72.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>   
+</body>
+</html>
